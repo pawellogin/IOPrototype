@@ -77,4 +77,75 @@ public class Pracodawca extends WebUzytkownik {
 		throw new UnsupportedOperationException();
 	}
 
+	public String getImie() {
+		return imie;
+	}
+
+	public void setImie(String imie) {
+		this.imie = imie;
+	}
+
+	public String getNazwisko() {
+		return nazwisko;
+	}
+
+	public void setNazwisko(String nazwisko) {
+		this.nazwisko = nazwisko;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public String getPesel() {
+		return pesel;
+	}
+
+	public void setPesel(String pesel) {
+		this.pesel = pesel;
+	}
+
+	public String getNumer_telefona() {
+		return numer_telefona;
+	}
+
+	public void setNumer_telefona(String numer_telefona) {
+		this.numer_telefona = numer_telefona;
+	}
+
+	public String getOrganizacja() {
+		return organizacja;
+	}
+
+	public void setOrganizacja(String organizacja) {
+		this.organizacja = organizacja;
+	}
+
+	public String getNumer_konta() {
+		return numer_konta;
+	}
+
+	public void setNumer_konta(String numer_konta) {
+		this.numer_konta = numer_konta;
+	}
+
+	public String getOpis() {
+		return opis;
+	}
+
+	public void setOpis(String opis) {
+		this.opis = opis;
+	}
+
+	public Boolean getSubskrypcja_profilu() {
+		return subskrypcja_profilu;
+	}
+
+	public void setSubskrypcja_profilu(Boolean subskrypcja_profilu) {
+		this.subskrypcja_profilu = subskrypcja_profilu;
+	}
 }

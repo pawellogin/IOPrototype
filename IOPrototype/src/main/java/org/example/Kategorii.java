@@ -1,10 +1,12 @@
+package org.example;
+
 public class Kategorii {
 
 	private String id_kategorii;
 	private String Nazwa;
 
-	public void Przegl?danie() {
-		// TODO - implement Kategorii.Przegl?danie
+	public void Przegladanie() {
+		// TODO - implement Kategorii.Przegladanie
 		throw new UnsupportedOperationException();
 	}
 

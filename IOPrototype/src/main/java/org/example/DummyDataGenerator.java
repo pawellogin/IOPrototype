@@ -1,11 +1,17 @@
 package org.example;
 
+import org.example.Enums.Status;
+import org.example.Enums.TypOgloszenia;
 import org.example.Users.Administrator;
 import org.example.Users.Moderator;
 import org.example.Users.Pracodawca;
 import org.example.Users.Pracownik;
 
+import java.util.Collections;
 import java.util.List;
+
+import static org.example.Enums.Kategoria.elektryka;
+import static org.example.Enums.Kategoria.hydraulika;
 
 public class DummyDataGenerator {
     public static void add_test_pracownicy(List<Pracownik> list){
@@ -117,4 +123,61 @@ public class DummyDataGenerator {
         list.add(administrator);
 
     }
+
+
+    public static void generate_ogloszenia_by_pracodawca(Pracodawca pracodawca, List<Oglosznenie> ogloszenia){
+        if(pracodawca.getStatus() == Status.nieaktywnyj) {
+            System.out.println("UŻYTKOWNIK NIE JEST AKTYWNY!!! : id = "+pracodawca.getId());
+        }
+
+        Oglosznenie oglosznenie = new Oglosznenie(
+                "Potrzebny elektryk",
+                "Potrzebuję ekeltryka do naprawy gniazdka",
+                TypOgloszenia.szukam_wykonawcy,
+                Collections.singletonList(elektryka),
+                pracodawca.getId()
+        );
+
+        ogloszenia.add(oglosznenie);
+
+        oglosznenie = new Oglosznenie(
+                "Potrzebny hydraulik",
+                "Potrzebuję hydraulka do naprawy kranu ",
+                TypOgloszenia.szukam_wykonawcy,
+                Collections.singletonList(hydraulika),
+                pracodawca.getId()
+        );
+
+        ogloszenia.add(oglosznenie);
+
+    }
+
+    public static void generate_ogloszenia_by_pracownik(Pracownik pracownik, List<Oglosznenie> ogloszenia){
+        if(pracownik.getStatus() == Status.nieaktywnyj) {
+            System.out.println("UŻYTKOWNIK NIE JEST AKTYWNY!!! : id = " + pracownik.getId());
+        }
+
+        Oglosznenie oglosznenie = new Oglosznenie(
+                "Szukam pracy jako elektryk",
+                "Jestem dobrym elektrym, zajme sie wszystkim",
+                TypOgloszenia.szukam_pracy,
+                Collections.singletonList(elektryka),
+                pracownik.getId()
+        );
+
+        ogloszenia.add(oglosznenie);
+
+        oglosznenie = new Oglosznenie(
+                "Szukam pracy jako hydraulik",
+                "Jestem dobrym hydraulikiem, zajme sie wszystkim",
+                TypOgloszenia.szukam_pracy,
+                Collections.singletonList(hydraulika),
+                pracownik.getId()
+        );
+
+        ogloszenia.add(oglosznenie);
+
+    }
+
+
 }
