@@ -7,7 +7,7 @@ public class Pracodawca extends WebUzytkownik {
 	private String imie;
 	private String nazwisko;
 	private String email;
-	private int pesel;
+	private String pesel;
 	private String numer_telefona;
 	private String organizacja;
 	private String numer_konta;
@@ -16,11 +16,10 @@ public class Pracodawca extends WebUzytkownik {
 
 	public Pracodawca(String login,
 					  String password,
-					  String pracodawca_id,
 					  String imie,
 					  String nazwisko,
 					  String email,
-					  int pesel,
+					  String pesel,
 					  String numer_telefona,
 					  String organizacja,
 					  String numer_konta,
