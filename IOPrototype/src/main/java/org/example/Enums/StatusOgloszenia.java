@@ -1,5 +1,7 @@
 package org.example.Enums;
 
 public enum StatusOgloszenia {
-    aktywne, nieaktywne, zajete;
+	aktywne,
+	nieaktywne,
+	zajete
 }

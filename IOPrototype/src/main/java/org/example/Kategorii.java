@@ -1,6 +1,16 @@
-package org.example;
-
 public class Kategorii {
-    String id_kategorii;
-    String nazwa;
+
+	private String id_kategorii;
+	private String Nazwa;
+
+	public void Przegl?danie() {
+		// TODO - implement Kategorii.Przegl?danie
+		throw new UnsupportedOperationException();
+	}
+
+	public void Dodawanie() {
+		// TODO - implement Kategorii.Dodawanie
+		throw new UnsupportedOperationException();
+	}
+
 }

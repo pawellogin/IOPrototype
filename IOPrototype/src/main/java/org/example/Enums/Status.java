@@ -1,6 +1,7 @@
 package org.example.Enums;
 
 public enum Status {
-    nieaktywny, aktywnyj, zablokowany;
-
+	nieaktywnyj,
+	aktywnyj,
+	zablokowany
 }
