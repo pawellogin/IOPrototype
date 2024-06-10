@@ -4,16 +4,24 @@ import org.example.Abstracts.WebUzytkownik;
 
 public class Moderator extends WebUzytkownik {
 
-	private String moderator_id;
 	private String imie;
 	private String nazwisko;
 	private String email;
 	private String numer_telefona;
 
-	public Moderator(String login, String password) {
+	public Moderator(String login,
+					 String password,
+					 String imie,
+					 String nazwisko,
+					 String email,
+					 String numer_telefona
+	) {
 		super(login, password);
+		this.imie = imie;
+		this.nazwisko = nazwisko;
+		this.email = email;
+		this.numer_telefona = numer_telefona;
 	}
-
 
 	public void przegladanie_problemow() {
 		// TODO - implement Moderator.przegladanie_problemow

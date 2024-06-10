@@ -4,6 +4,8 @@ import org.example.Enums.Status;
 
 public abstract class WebUzytkownik {
 
+	private static int idCounter = 0;
+	private String id;
 	private String login;
 	private String password;
 	private org.example.Enums.Status Status;
@@ -14,6 +16,10 @@ public abstract class WebUzytkownik {
 		this.Status = org.example.Enums.Status.nieaktywnyj;
 	}
 
+
+	private synchronized String generateId() {
+		return String.format("%06d", ++idCounter);
+	}
 
 	public void zarejestruj_sie() {
 		// TODO - implement WebUzytkownik.zarejestruj_sie

@@ -6,8 +6,6 @@ import java.io.File;
 
 public class Pracownik extends WebUzytkownik {
 
-	private static int idCounter = 0;
-	private String pracownik_id;
 	private String imie;
 	private String nazwisko;
 	private String email;
@@ -17,16 +15,29 @@ public class Pracownik extends WebUzytkownik {
 	private String opis;
 	private Boolean subskrypcja_profilu;
 	private File cv;
-	private File attribute;
 
-	public Pracownik(String login, String password) {
+	public Pracownik(String login,
+					 String password,
+					 String imie,
+					 String nazwisko,
+					 String email,
+					 String numer_telefona,
+					 int pesel,
+					 String numer_konta,
+					 String opis
+	) {
 		super(login, password);
-		this.pracownik_id = generateId();
+		this.imie = imie;
+		this.nazwisko = nazwisko;
+		this.email = email;
+		this.numer_telefona = numer_telefona;
+		this.pesel = pesel;
+		this.numer_konta = numer_konta;
+		this.opis = opis;
+		this.subskrypcja_profilu = false;
+		this.cv = null;
 	}
 
-	private synchronized String generateId() {
-		return "PRAC" + (++idCounter);
-	}
 
 	public void stworzenia_ogloszenia() {
 		// TODO - implement Pracownik.stworzenia_ogloszenia

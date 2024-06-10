@@ -4,14 +4,23 @@ import org.example.Abstracts.WebUzytkownik;
 
 public class Administrator extends WebUzytkownik {
 
-	private String administrator_id;
 	private String imie;
 	private String nazwisko;
 	private String email;
 	private String numer_telefona;
 
-	public Administrator(String login, String password) {
+	public Administrator(String login,
+						 String password,
+						 String imie,
+						 String nazwisko,
+						 String email,
+						 String numer_telefona
+	) {
 		super(login, password);
+		this.imie = imie;
+		this.nazwisko = nazwisko;
+		this.email = email;
+		this.numer_telefona = numer_telefona;
 	}
 
 	public void zmiana_statusu_uzytkownikow() {

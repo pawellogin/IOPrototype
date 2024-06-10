@@ -4,7 +4,6 @@ import org.example.Abstracts.WebUzytkownik;
 
 public class Pracodawca extends WebUzytkownik {
 
-	private String pracodawca_id;
 	private String imie;
 	private String nazwisko;
 	private String email;
@@ -15,8 +14,28 @@ public class Pracodawca extends WebUzytkownik {
 	private String opis;
 	private Boolean subskrypcja_profilu;
 
-	public Pracodawca(String login, String password) {
+	public Pracodawca(String login,
+					  String password,
+					  String pracodawca_id,
+					  String imie,
+					  String nazwisko,
+					  String email,
+					  int pesel,
+					  String numer_telefona,
+					  String organizacja,
+					  String numer_konta,
+					  String opis
+	) {
 		super(login, password);
+		this.imie = imie;
+		this.nazwisko = nazwisko;
+		this.email = email;
+		this.pesel = pesel;
+		this.numer_telefona = numer_telefona;
+		this.organizacja = organizacja;
+		this.numer_konta = numer_konta;
+		this.opis = opis;
+		this.subskrypcja_profilu = null;
 	}
 
 	public void stworzenia_ogloszenia() {
