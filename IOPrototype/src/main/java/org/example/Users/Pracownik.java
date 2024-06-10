@@ -10,7 +10,7 @@ public class Pracownik extends WebUzytkownik {
 	private String nazwisko;
 	private String email;
 	private String numer_telefona;
-	private int pesel;
+	private String pesel;
 	private String numer_konta;
 	private String opis;
 	private Boolean subskrypcja_profilu;
@@ -22,7 +22,7 @@ public class Pracownik extends WebUzytkownik {
 					 String nazwisko,
 					 String email,
 					 String numer_telefona,
-					 int pesel,
+					 String pesel,
 					 String numer_konta,
 					 String opis
 	) {
