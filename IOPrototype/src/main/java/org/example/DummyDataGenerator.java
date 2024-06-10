@@ -1,5 +1,8 @@
 package org.example;
 
+import org.example.Users.Administrator;
+import org.example.Users.Moderator;
+import org.example.Users.Pracodawca;
 import org.example.Users.Pracownik;
 
 import java.util.List;
@@ -17,7 +20,6 @@ public class DummyDataGenerator {
                 "12345678901234567890123456",
                 "Opis pracownika"
         );
-
         list.add(pracownik);
 
         pracownik = new Pracownik(
@@ -31,8 +33,88 @@ public class DummyDataGenerator {
                 "65432109876543210987654321",
                 "New employee description"
         );
-
         list.add(pracownik);
+    }
+
+    public static void add_test_pracodawcy(List<Pracodawca> list){
+        Pracodawca pracodawca = new Pracodawca(
+                "login",
+                "password",
+                "Jan",
+                "Kowalski",
+                "jan.kowalski@example.com",
+                "123456789",
+                "12345678901",
+                "Sp. z o.o",
+                "65432109874543210981654321",
+                "opis pracodawcy"
+        );
+        list.add(pracodawca);
+
+        pracodawca = new Pracodawca(
+                "new_login",
+                "new_password",
+                "Adam",
+                "Nowak",
+                "adam.nowak@example.com",
+                "987654321",
+                "10987654321",
+                "New Company Ltd.",
+                "12345678901234567890123456",
+                "New employer description"
+        );
+        list.add(pracodawca);
+    }
+
+    public static void add_test_moderatorzy(List<Moderator> list){
+        Moderator moderator = new Moderator(
+                "login",
+                "password",
+                "Jan",
+                "Kowalski",
+                "jan.kowalski@example.com",
+                "123456789"
+        );
+
+        list.add(moderator);
+
+        moderator = new Moderator(
+                "new_login",
+                "new_password",
+                "Adam",
+                "Nowak",
+                "adam.nowak@example.com",
+                "987654321"
+        );
+
+
+        list.add(moderator);
+
+    }
+
+    public static void add_test_adminstratorzy(List<Administrator> list){
+        Administrator administrator = new Administrator(
+                "login",
+                "password",
+                "Jan",
+                "Kowalski",
+                "jan.kowalski@example.com",
+                "123456789"
+        );
+
+        list.add(administrator);
+
+        administrator = new Administrator(
+                "new_login",
+                "new_password",
+                "Adam",
+                "Nowak",
+                "adam.nowak@example.com",
+                "987654321"
+        );
+
+
+        list.add(administrator);
 
     }
 }
