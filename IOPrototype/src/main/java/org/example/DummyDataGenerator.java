@@ -130,25 +130,8 @@ public class DummyDataGenerator {
             System.out.println("UŻYTKOWNIK NIE JEST AKTYWNY!!! : id = "+pracodawca.getId());
         }
 
-        Oglosznenie oglosznenie = new Oglosznenie(
-                "Potrzebny elektryk",
-                "Potrzebuję ekeltryka do naprawy gniazdka",
-                TypOgloszenia.szukam_wykonawcy,
-                Collections.singletonList(elektryka),
-                pracodawca.getId()
-        );
+        pracodawca.stworzenia_ogloszenia(ogloszenia);
 
-        ogloszenia.add(oglosznenie);
-
-        oglosznenie = new Oglosznenie(
-                "Potrzebny hydraulik",
-                "Potrzebuję hydraulka do naprawy kranu ",
-                TypOgloszenia.szukam_wykonawcy,
-                Collections.singletonList(hydraulika),
-                pracodawca.getId()
-        );
-
-        ogloszenia.add(oglosznenie);
 
     }
 
@@ -157,25 +140,7 @@ public class DummyDataGenerator {
             System.out.println("UŻYTKOWNIK NIE JEST AKTYWNY!!! : id = " + pracownik.getId());
         }
 
-        Oglosznenie oglosznenie = new Oglosznenie(
-                "Szukam pracy jako elektryk",
-                "Jestem dobrym elektrym, zajme sie wszystkim",
-                TypOgloszenia.szukam_pracy,
-                Collections.singletonList(elektryka),
-                pracownik.getId()
-        );
-
-        ogloszenia.add(oglosznenie);
-
-        oglosznenie = new Oglosznenie(
-                "Szukam pracy jako hydraulik",
-                "Jestem dobrym hydraulikiem, zajme sie wszystkim",
-                TypOgloszenia.szukam_pracy,
-                Collections.singletonList(hydraulika),
-                pracownik.getId()
-        );
-
-        ogloszenia.add(oglosznenie);
+        pracownik.stworzenia_ogloszenia(ogloszenia);
 
     }
 

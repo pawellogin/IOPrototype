@@ -1,6 +1,8 @@
 package org.example.Users;
 
 import org.example.Abstracts.WebUzytkownik;
+import org.example.Enums.StatusOgloszenia;
+import org.example.Oglosznenie;
 
 public class Moderator extends WebUzytkownik {
 
@@ -28,14 +30,12 @@ public class Moderator extends WebUzytkownik {
 		throw new UnsupportedOperationException();
 	}
 
-	public void zmiana_statusu_uzytkownikow() {
-		// TODO - implement Moderator.zmiana_statusu_uzytkownikow
-		throw new UnsupportedOperationException();
+	public void zmiana_statusu_uzytkownikow(WebUzytkownik webUzytkownik, org.example.Enums.Status status) {
+		webUzytkownik.setStatus(status);
 	}
 
-	public void zmiana_statusu_ogloszen() {
-		// TODO - implement Moderator.zmiana_statusu_ogloszen
-		throw new UnsupportedOperationException();
+	public void zmiana_statusu_ogloszen(Oglosznenie oglosznenie, StatusOgloszenia statusOgloszenia) {
+		oglosznenie.setStatusOgloszenia(statusOgloszenia);
 	}
 
 	public void przegladanie_uzytkownikow() {

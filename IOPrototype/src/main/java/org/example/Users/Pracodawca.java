@@ -1,6 +1,13 @@
 package org.example.Users;
 
 import org.example.Abstracts.WebUzytkownik;
+import org.example.Enums.TypOgloszenia;
+import org.example.Oglosznenie;
+
+import java.util.Collections;
+import java.util.List;
+
+import static org.example.Enums.Kategoria.elektryka;
 
 public class Pracodawca extends WebUzytkownik {
 
@@ -37,9 +44,17 @@ public class Pracodawca extends WebUzytkownik {
 		this.subskrypcja_profilu = null;
 	}
 
-	public void stworzenia_ogloszenia() {
-		// TODO - implement Pracodawca.stworzenia_ogloszenia
-		throw new UnsupportedOperationException();
+	public void stworzenia_ogloszenia(List<Oglosznenie> ogloszenia) {
+
+		Oglosznenie oglosznenie = new Oglosznenie(
+				"Potrzebny elektryk",
+				"Potrzebuję ekeltryka do naprawy gniazdka",
+				TypOgloszenia.szukam_wykonawcy,
+				Collections.singletonList(elektryka),
+				this.getId()
+		);
+
+		ogloszenia.add(oglosznenie);
 	}
 
 	public void przegladanie_ogloszen() {
